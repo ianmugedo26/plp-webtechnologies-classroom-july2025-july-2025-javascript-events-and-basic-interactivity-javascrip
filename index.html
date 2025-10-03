@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ironclad Tech Bootcamp</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header>
+        <h1>Ironclad Tech Bootcamp</h1>
+        <p>Forging the next generation of elite Kenyan tech warriors</p>
+    </header>
+
+    <!-- Dark/Light Mode Toggle -->
+    <div class="theme-toggle">
+        <button id="theme-toggle-btn">Toggle Night Vision</button>
+    </div>
+
+    <main>
+        <!-- Counter Game Section -->
+        <section class="interactive-section">
+            <h2>Mission Impact Tracker</h2>
+            <p>How many recruits have you enlisted for the bootcamp?</p>
+            <div class="counter-container">
+                <button id="decrement">−</button>
+                <span id="counter-value">0</span>
+                <button id="increment">+</button>
+            </div>
+            <p id="counter-message"></p>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="interactive-section">
+            <h2>Intel Briefing: Common Queries</h2>
+            <article class="faq-item">
+                <header class="faq-question">What’s the entry criteria? <span class="toggle-icon">+</span></header>
+                <div class="faq-answer">
+                    <p>Applicants must be Kenyan nationals aged 18-35 with a strong desire to dominate the digital frontier. Basic tech knowledge is a plus but not mandatory.</p>
+                </div>
+            </article>
+            <article class="faq-item">
+                <header class="faq-question">How long does the training last? <span class="toggle-icon">+</span></header>
+                <div class="faq-answer">
+                    <p>The bootcamp spans 6 months — 3 months of hardcore training followed by 3 months on the field with live projects and missions.</p>
+                </div>
+            </article>
+            <article class="faq-item">
+                <header class="faq-question">Is there any cost for joining? <span class="toggle-icon">+</span></header>
+                <div class="faq-answer">
+                    <p>This mission is fully funded for selected warriors through a coalition between the Ministry of Education and tech powerhouses.</p>
+                </div>
+            </article>
+        </section>
+
+        <!-- Enrollment Form -->
+        <section class="form-section">
+            <h2>Enlistment Application</h2>
+            <form id="enrollment-form" novalidate>
+                <div class="form-group">
+                    <label for="name">Warrior Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" />
+                    <span class="error-message" id="name-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Comms Email:</label>
+                    <input type="email" id="email" name="email" placeholder="your.email@example.com" />
+                    <span class="error-message" id="email-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Contact Number:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="07XX XXX XXX" />
+                    <span class="error-message" id="phone-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="county">Operational Base (County):</label>
+                    <select id="county" name="county">
+                        <option value="">Select your base</option>
+                        <option value="nairobi">Nairobi</option>
+                        <option value="mombasa">Mombasa</option>
+                        <option value="kisumu">Kisumu</option>
+                        <option value="nakuru">Nakuru</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <span class="error-message" id="county-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Create Access Code:</label>
+                    <input type="password" id="password" name="password" placeholder="Min 6 characters" />
+                    <span class="error-message" id="password-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Access Code:</label>
+                    <input type="password" id="confirm-password" name="confirm-password" />
+                    <span class="error-message" id="confirm-password-error"></span>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="terms" name="terms" />
+                    <label for="terms">I pledge allegiance to the Ironclad Code</label>
+                    <span class="error-message" id="terms-error"></span>
+                </div>
+
+                <button type="submit" id="submit-btn">Enlist Now</button>
+            </form>
+
+            <section id="success-message" class="success-message" hidden>
+                <h3>Mission Accepted!</h3>
+                <p>Welcome to Ironclad Tech Bootcamp. Prepare to transform into a digital warrior. Our command will contact you shortly.</p>
+            </section>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Ironclad Tech Bootcamp. Powered by the Ministry of Education & Tech Titans.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
